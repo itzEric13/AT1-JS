@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/av 2/css/estilo.css">
+    <title>Atividade 2</title>
+</head>
+<body>
+   <section class="container">
+        <h1> Vestibular</h1>
+        <br>
+        <label for="nome">Nome completo :*</label>
+        <input id="nome" type="text" placeholder="Informe seu nome completo" required>
+        <br><br>
+
+        <label for="numInscricao">Número da inscrição :*</label>
+        <input id="numInscricao" type="number" placeholder="Informe o número da sua inscrição (Começa com 2024)" required min="20240">
+        <br><br>
+
+        <label for="anoNascimento">Ano do nascimento :*</label>
+        <input id="anoNascimento" type="number" placeholder="Informe o ano de seu nascimento" min="1901" max="2007" required>
+        <br><br>
+
+        <h2>Notas</h2>
+        <label for="natureza">Natureza: *</label>
+        <input id="natureza" type="number" placeholder="Informe sua Nota" min="0" max="1000" required>
+        <br><br>
+        
+        <label for="humanas">Humanas: *</label>
+        <input id="humanas" type="number" placeholder="Informe sua Nota" min="0" max="1000" required>
+        <br><br>
+        
+        <label for="linguagens">Linguagens: *</label>
+        <input id="linguagens" type="number" placeholder="Informe sua Nota" min="0" max="1000" required>
+        <br><br>
+        
+        <label for="matematica">Matematica: *</label>
+        <input id="matematica" type="number" placeholder="Informe sua Nota" min="0" max="1000" required>
+        <br><br>
+
+        <label for="redacao">Redação: *</label>
+        <input id="redacao" type="number" placeholder="Informe sua Nota" min="0" max="1000" required>
+        <br><br>
+       
+        <button type="button" id="calcular">Resultado</button>
+       <span id="aprovado"></span>
+       <span id="reprovado"></span>
+       <span id="recuperação"></span>
+        
+        <br>
+        
+   </section>
+   
+   <section>
+    <h2 class="resultado"></h2>
+   </section>    
+    
+    <script src="js/script.js"></script>
+</body>
+</html
