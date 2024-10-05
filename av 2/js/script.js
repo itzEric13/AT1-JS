@@ -15,14 +15,14 @@ function calcularResultado() {
     
     if (nota >= 550) {
         mensagem = "Aprovado";
-        'aprovado';
+        
         
     } else if (nota >= 401) {
         mensagem = "Recuperação";
-        'recuperacao';
+        
     } else {
         mensagem = "Reprovado";
-        'reprovado';
+        
     } 
 
    if (anoNascimento<=1900) {
