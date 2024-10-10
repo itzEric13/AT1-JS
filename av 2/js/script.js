@@ -8,38 +8,64 @@ function calcularResultado() {
     let matematica = parseFloat(document.querySelector('#matematica').value);
     let redacao = parseFloat(document.querySelector('#redacao').value);
 
-   
-    let nota = (natureza + humanas + linguagens + matematica + redacao) / 5;
-    let mensagem;
+    let resultadoNatureza, resultadoHumanas, resultadoLinguagens, resultadoMatematica, resultadoRedacao;
 
-    
-    if (nota >= 550) {
-        mensagem = "Aprovado";
-        
-        
-    } else if (nota >= 401) {
-        mensagem = "Recuperação";
-        
+    if (natureza >= 550) {
+        resultadoNatureza = "<span class='aprovado'>Aprovado</span>";
+    } else if (natureza >= 401) {
+        resultadoNatureza = "<span class='recuperacao'>Recuperação</span>";
     } else {
-        mensagem = "Reprovado";
-        
+        resultadoNatureza = "<span class='reprovado'>Reprovado</span>";
+    }
+
+    if (humanas >= 550) {
+        resultadoHumanas = "<span class='aprovado'>Aprovado</span>";
+    } else if (humanas >= 401) {
+        resultadoHumanas = "<span class='recuperacao'>Recuperação</span>";
+    } else {
+        resultadoHumanas = "<span class='reprovado'>Reprovado</span>";
+    }
+
+    if (linguagens >= 550) {
+        resultadoLinguagens = "<span class='aprovado'>Aprovado</span>";
+    } else if (linguagens >= 401) {
+        resultadoLinguagens = "<span class='recuperacao'>Recuperação</span>";
+    } else {
+        resultadoLinguagens = "<span class='reprovado'>Reprovado</span>";
+    }
+
+    if (matematica >= 550) {
+        resultadoMatematica = "<span class='aprovado'>Aprovado</span>";
+    } else if (matematica >= 401) {
+        resultadoMatematica = "<span class='recuperacao'>Recuperação</span>";
+    } else {
+        resultadoMatematica = "<span class='reprovado'>Reprovado</span>";
+    }
+
+    if (redacao >= 550) {
+        resultadoRedacao = "<span class='aprovado'>Aprovado</span>";
+    } else if (redacao >= 401) {
+        resultadoRedacao = "<span class='recuperacao'>Recuperação</span>";
+    } else {
+        resultadoRedacao = "<span class='reprovado'>Reprovado</span>";
+    }
+
+    let mensagemIdade;
+    if (anoNascimento < 1900 || anoNascimento > 2008) {
+        mensagemIdade = "Aluno não pode prestar o vestibular ";
     } 
+    else {
+        mensagemIdade = "Candidato ";
+    }
 
-   if (anoNascimento<=1900) {
-    mensagem = "Idade inválida";
-   }
-   else if (anoNascimento >=2008) {
-    mensagem = "Idade inválida";
-   }
-
-   else {
-    anoNascimento ;
-   }
-
-
-    document.querySelector('.resultado').innerText = `${nome}, nascido em ${anoNascimento}, sua nota final é: ${nota.toFixed(2)} - ${mensagem}`;
+    document.querySelector('.resultado').innerHTML =
+        `${nome}, nascido em ${anoNascimento}, ${mensagemIdade} : <br>
+        Natureza - Média ${natureza}, ${resultadoNatureza}. <br>
+        Humanas - Média ${humanas}, ${resultadoHumanas}. <br>
+        Linguagens - Média ${linguagens}, ${resultadoLinguagens}. <br>
+        Matemática - Média ${matematica}, ${resultadoMatematica}. <br> 
+        Redação - Média ${redacao}, ${resultadoRedacao}.`;
 }
-
 
 document
     .querySelector('#calcular')

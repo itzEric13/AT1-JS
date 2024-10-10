@@ -1,6 +1,23 @@
-input , button{
+input, button {
     width: 350px;
     padding: 10px;
     margin: 10px;
 }
 
+.aprovado {
+    font-style: italic;
+    font-weight: bold;
+    color: blue; 
+}
+
+.reprovado {
+    font-style: italic;
+    font-weight: bold;
+    color: red; 
+}
+
+.recuperacao {
+    font-style: italic;
+    font-weight: bold;
+    color: orange; 
+}
