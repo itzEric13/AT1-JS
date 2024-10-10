@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    
+    <link rel="stylesheet" href="/av 1/css/estilo.css">
+</head>
+<body>
+   <section class="container">
+        <h1>Sistema de Pagamento</h1>
+        <br>
+        <label for="nome">Nome Completo: *</label>
+        <input id="nome" type="text" placeholder="Informe o nome completo" required>
+        <br> <br>
+
+        <label for="pisPasep">PIS/PASEP: *</label>
+        <input id="pisPasep" type="number" placeholder="Informe o PIS/PASEP (11 digitos)"  required>
+        <br> <br>
+
+        <label for="valorHora">Valor da Hora Trabalhada: *</label>
+        <input id="valorHora" type="number" placeholder="Valor da hora trabalhada" min="20" max="500" required>
+        <br> <br>
+
+        <label for="quantHora">Quantidade de Horas Trabalhadas: *</label>
+        <input id="quantHora" type="number" placeholder="Digite a quantidade de horas trabalhadas" min="20" max="200" required>
+        <br>
+        <br>
+        <button type="button">Calcular .</button>
+    </section>
+    
+   <section>
+    <h2 class="resultado"></h2>
+   </section>    
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
